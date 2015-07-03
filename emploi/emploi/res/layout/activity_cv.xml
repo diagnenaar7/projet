@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+      
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CreercvActivity" >
+
+    <EditText
+        android:id="@+id/txtobject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtnom"
+        android:layout_below="@+id/txtnom"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="votre objectif" />
+
+    <EditText
+        android:id="@+id/txtnom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtprenom"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="entrer votre nom" />
+
+    <EditText
+        android:id="@+id/txtdip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtobject"
+        android:layout_below="@+id/txtobject"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="vos diplomes"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/txtexp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtdip"
+        android:layout_below="@+id/txtdip"
+        android:layout_marginTop="29dp"
+        android:ems="10"
+        android:hint="vos experiences"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:text="CREER VOTRE CV" />
+
+    <EditText
+        android:id="@+id/txtprenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtnom"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="enter votre prenom" />
+
+    <Button
+        android:id="@+id/btnenvoyer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/txtexp"
+        android:layout_marginTop="20dp"
+        android:text="envoyer" />
+
+</RelativeLayout>
