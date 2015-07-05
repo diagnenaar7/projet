@@ -1,0 +1,132 @@
+-- phpMyAdmin SQL Dump
+-- version 4.1.14
+-- http://www.phpmyadmin.net
+--
+-- Client :  127.0.0.1
+-- Généré le :  Ven 03 Juillet 2015 à 19:34
+-- Version du serveur :  5.6.17
+-- Version de PHP :  5.5.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Base de données :  `esmt`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `candidature`
+--
+
+CREATE TABLE IF NOT EXISTS `candidature` (
+  `idcandidat` int(10) NOT NULL,
+  `idposte` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `candidature`
+--
+
+INSERT INTO `candidature` (`idcandidat`, `idposte`) VALUES
+(0, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `cv`
+--
+
+CREATE TABLE IF NOT EXISTS `cv` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `prenom` varchar(300) NOT NULL,
+  `nom` varchar(300) NOT NULL,
+  `objectif` varchar(300) NOT NULL,
+  `diplome` varchar(300) NOT NULL,
+  `experience` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `cv`
+--
+
+INSERT INTO `cv` (`id`, `prenom`, `nom`, `objectif`, `diplome`, `experience`) VALUES
+(2, 'aminata', 'diaw', 'gagner de largent', 'licence', 'bac+2 stage');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `demandeur`
+--
+
+CREATE TABLE IF NOT EXISTS `demandeur` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `Prénom` varchar(100) NOT NULL,
+  `Nom` varchar(100) NOT NULL,
+  `login` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `demandeur`
+--
+
+INSERT INTO `demandeur` (`id`, `Prénom`, `Nom`, `login`, `password`) VALUES
+(1, 'Aminata', 'Diaw', 'colso', 'passer'),
+(2, 'Babacar', 'Mbodj', 'babs', 'passer');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `favoris`
+--
+
+CREATE TABLE IF NOT EXISTS `favoris` (
+  `id` int(11) NOT NULL,
+  `filieres` varchar(100) NOT NULL,
+  `entreprise` varchar(100) NOT NULL,
+  `description` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `favoris`
+--
+
+INSERT INTO `favoris` (`id`, `filieres`, `entreprise`, `description`) VALUES
+(1, 'Agroalimentaire', 'Sedima', ' ingenieur bac +5');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `offres`
+--
+
+CREATE TABLE IF NOT EXISTS `offres` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `categorie` varchar(50) NOT NULL,
+  `Entreprise` varchar(100) NOT NULL,
+  `Profil` varchar(50) NOT NULL,
+  `Description` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `offres`
+--
+
+INSERT INTO `offres` (`id`, `categorie`, `Entreprise`, `Profil`, `Description`) VALUES
+(1, 'Telecommunications', 'Orange', 'informaticien', 'bac+4'),
+(2, 'Agroalimentaire', 'Sedima', 'ingénieur en agroalimentaire', 'bac+4 avec un an d''experience.');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
